@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cao Văn Thượng</title>
+    <style>
+        /* Cơ bản */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Phần ảnh đại diện */
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .avatar:hover {
+            transform: scale(1.1);
+        }
+
+        /* Phần thông tin liên hệ */
+        .contact {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact:hover {
+            background-color: #ecf0f1;
+        }
+        .contact-details {
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f4f6f7;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+
+        /* Chế độ tối (Dark Mode) */
+        body.dark-mode {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+        .container.dark-mode {
+            background-color: #34495e;
+        }
+        .contact.dark-mode {
+            background-color: #34495e;
+        }
+        .contact.dark-mode a {
+            color: #ecf0f1;
+        }
+
+        .toggle-btn {
+            background-color: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: background-color 0.3s ease;
+        }
+        .toggle-btn:hover {
+            background-color: #3498db;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #999;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Trang Cá Nhân</h1>
+        <img src="https://via.placeholder.com/150" alt="Avatar" class="avatar">
+
+        <h2>👋 Giới thiệu bản thân</h2>
+        <p>Xin chào! Mình là <strong>Cao Văn Thượng</strong>, sinh viên ngành <strong>Công nghệ thông tin</strong> tại <strong>
+          Trường Cao Đẳng Kĩ thuật công nghệ nha trang</strong>. Mình đam mê lập trình web, Mình thích môn Công Nghệ thông tin (UI/UX) và phát triển ứng dụng front-end. Ngoài ra, mình còn thích chia sẻ kiến thức và học hỏi công nghệ mới mỗi ngày.</p>
+
+        <div class="contact" onclick="toggleContactDetails()">
+            <h2>📫 Thông tin liên hệ</h2>
+            <p>Nhấn vào để xem thông tin liên hệ của tôi!</p>
+        </div>
+
+        <div class="contact-details">
+            <p><strong>Email:</strong> <a href="caovanthuong@gmail.com"></a></p>
+            <p><strong>Điện thoại:</strong> 0123 456 789</p>
+            <p><strong>Facebook:</strong> <a href="https://facebook.com/Văn Thượng" target="_blank">facebook.com/Văn Thượng</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Văn Thượng" target="_blank">github.com/Văn Thượng</a></p>
+        </div>
+
+        <button class="toggle-btn" onclick="toggleDarkMode()">Chuyển đổi chế độ tối</button>
+
+        <div class="footer">
+            &copy; 2025 Cao Văn Thượng. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const container = document.querySelector('.container');
+            const contact = document.querySelector('.contact');
+            body.classList.toggle('dark-mode');
+            container.classList.toggle('dark-mode');
+            contact.classList.toggle('dark-mode');
+        }
+
+        // Hàm để hiển thị/ẩn thông tin liên hệ
+        function toggleContactDetails() {
+            const contactDetails = document.querySelector('.contact-details');
+            if (contactDetails.style.display === "block") {
+                contactDetails.style.display = "none";
+            } else {
+                contactDetails.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
