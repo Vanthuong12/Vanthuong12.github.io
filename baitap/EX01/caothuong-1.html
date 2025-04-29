@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang Cá Nhân - Cao Văn Thượng</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e6f7ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00bfff;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #333;
+      margin: 10px 0 5px;
+    }
+
+    p {
+      color: #555;
+      margin: 5px 0;
+    }
+
+    button {
+      background-color: #00bfff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #009acd;
+    }
+
+    .contact-info, .map, .bangdiem {
+      display: none;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      margin: 5px;
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 6px;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .zalo { background: #0068ff; }
+    .tiktok { background: #000; }
+    .facebook { background: #1877f2; }
+    .call { background: #28a745; }
+
+    iframe {
+      margin-top: 20px;
+      border: 2px solid #00bfff;
+      border-radius: 10px;
+      width: 100%;
+      height: 250px;
+    }
+
+    /* Bảng điểm */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #00bfff;
+      color: white;
+    }
+
+    .gioi {
+      background-color: #c6f6d5;
+    }
+
+    .kha {
+      background-color: #fefcbf;
+    }
+
+    .xuat-sac {
+      background-color: #bee3f8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-card">
+    <img src="https://reviewedu.net/wp-content/uploads/2021/10/cao-dang-ky-thuat-cong-nghe-nha-trang-7-1.jpg" alt="Avatar" class="avatar">
+    <h2>Cao Văn Thượng</h2>
+    <p>Sinh viên Trường CĐ Kỹ thuật Công nghệ Nha Trang<br>Yêu thích công nghệ và thiết kế 🎨</p>
+
+    <!-- Nút hiển thị thông tin liên hệ -->
+    <button onclick="toggleInfo()">Hiển thị thông tin liên hệ</button>
+
+    <!-- Phần thông tin liên hệ -->
+    <div class="contact-info" id="info">
+      <p><strong>📞 Điện thoại:</strong> <a href="tel:0987654321">0987 654 321</a></p>
+      <p><strong>📧 Email:</strong> <a href="mailto:nguyenvana@email.com">Vanthuong@email.com</a></p>
+      <p><strong>📍 Địa chỉ:</strong> Trường Cao đẳng Kỹ thuật Công nghệ Nha Trang</p>
+
+      <div class="social-links">
+        <a class="call" href="tel:0987654321">📞 Gọi Ngay</a>
+        <a class="zalo" href="https://zalo.me/0987654321" target="_blank">💬 Zalo</a>
+        <a class="facebook" href="https://facebook.com/yourprofile" target="_blank">📘 Facebook</a>
+        <a class="tiktok" href="https://www.tiktok.com/@yourusername" target="_blank">🎵 TikTok</a>
+      </div>
+    </div>
+
+    <!-- Nút hiển thị bản đồ -->
+    <button onclick="toggleMap()">Hiển thị bản đồ</button>
+
+    <!-- Phần bản đồ -->
+    <div class="map" id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.305603700408!2d109.1936!3d12.2674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171a1d8b8c8b0c1%3A0x3a7b6f6c8a1a1c0!2zVHLhuqduZyBDYW8gZGFuZyBLeSB0aHVhdCBDb25nIG5nYQ!5e0!3m2!1svi-VN!2s!4v1683029392873!5m2!1svi-VN!2s"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- Nút hiển thị bảng điểm -->
+    <button onclick="toggleBangDiem()">Hiển thị bảng điểm học tập</button>
+
+    <!-- Phần bảng điểm -->
+    <div class="bangdiem" id="bangdiem">
+      <h3 style="margin-top: 20px; color: #333;">📋 Bảng điểm học tập</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Môn học</th>
+            <th>Số tín chỉ</th>
+            <th>Điểm</th>
+            <th>Xếp loại</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="gioi">
+            <td>Lập trình C++</td>
+            <td>3</td>
+            <td>8.5</td>
+            <td>Giỏi</td>
+          </tr>
+          <tr class="kha">
+            <td>Cơ sở dữ liệu</td>
+            <td>3</td>
+            <td>7.0</td>
+            <td>Khá</td>
+          </tr>
+          <tr class="xuat-sac">
+            <td>Thiết kế Web</td>
+            <td>2</td>
+            <td>9.0</td>
+            <td>Xuất sắc</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo() {
+      const info = document.getElementById("info");
+      info.style.display = info.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleMap() {
+      const map = document.getElementById("map");
+      map.style.display = map.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleBangDiem() {
+      const bang = document.getElementById("bangdiem");
+      bang.style.display = bang.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
