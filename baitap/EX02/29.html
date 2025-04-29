@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Cá Nhân Sinh Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f2f2f2;
+        }
+
+        .profile {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        .toolbar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .toolbar button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .toolbar button:hover {
+            background-color: #0056b3;
+        }
+
+        .section {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+        }
+
+        .section.show {
+            max-height: 1000px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        .student-profile .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .student-profile .info-row > div {
+            background-color: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            box-shadow: 0 0 4px rgba(0,0,0,0.05);
+        }
+
+        .contact a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile">
+    <h2 style="text-align: center;">Trang Cá Nhân Sinh Viên</h2>
+    <img src="https://24hstore.vn/upload_images/images/hinh-nen-chibi/Hinh-nen-cute-chibi-nu_(5).jpg" alt="Ảnh đại diện" class="avatar">
+
+    <!-- Thanh công cụ ngang -->
+    <div class="toolbar">
+        <button onclick="toggleSection('personalInfo')">Thông Tin Cá Nhân</button>
+        <button onclick="toggleSection('contactInfo')">Liên Hệ</button>
+        <button onclick="toggleSection('studentInfo')">Hồ Sơ Sinh Viên</button>
+    </div>
+
+    <!-- Thông tin cá nhân -->
+    <div id="personalInfo" class="section">
+        <p><strong>Họ và tên:</strong> Cao Văn Thượng</p>
+        <p><strong>Ngày sinh:</strong> 17/01/2004</p>
+        <p><strong>Giới tính:</strong> Nam</p>
+    </div>
+
+    <!-- Thông tin liên hệ -->
+    <div id="contactInfo" class="section contact">
+        <p><strong>Email:</strong> Vanthuong@example.com</p>
+        <p><strong>Điện thoại:</strong> 0123 456 789</p>
+        <p><strong>Địa chỉ:</strong> 123 Khánh Vĩnh, Khánh Hoà</p>
+        <p><strong>Facebook:</strong> <a href="https://facebook.com/nguyenvana" target="_blank">facebook.com/nguyenvana</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nguyenvana" target="_blank">linkedin.com/in/nguyenvana</a></p>
+    </div>
+
+    <!-- Hồ sơ sinh viên nằm ngang -->
+    <div id="studentInfo" class="section student-profile">
+        <div class="info-row">
+            <div><strong>Trường:</strong><br> Cao Đẳng Kĩ Thuật Công Nghệ Nha Trang</div>
+            <div><strong>Lớp:</strong><br> CNTT18B</div>
+            <div><strong>Mã SV:</strong><br> 2212345</div>
+            <div><strong>Ngành:</strong><br> Công nghệ thông tin</div>
+            <div><strong>Khóa:</strong><br> 2022 - 2026</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleSection(id) {
+        const section = document.getElementById(id);
+        section.classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>
