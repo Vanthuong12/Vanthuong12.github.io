@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Trang cá nhân của sinh viên Cao Văn Thượng, trường Cao đẳng Kỹ thuật Công nghệ Nha Trang, thông tin học tập, sở thích, kỹ năng, và mục tiêu nghề nghiệp.">
+  <title>Trang Cá Nhân Sinh Viên</title>
+  <style>
+    body {
+      background-color: #f7f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+    .card {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 2.2em;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    .accordion-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 10px;
+      padding: 12px;
+      background-color: #16a085;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .accordion-button:hover {
+      background-color: #1abc9c;
+      transform: scale(1.05);
+    }
+    .arrow {
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+    .accordion-button.open .arrow {
+      transform: rotate(180deg);
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      background-color: #ecf0f1;
+      border-left: 4px solid #16a085;
+      border-radius: 10px;
+      margin-top: 5px;
+      padding: 0 20px;
+    }
+    .accordion-content.open {
+      padding: 20px;
+    }
+    a {
+      color: #16a085;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+    th {
+      background-color: #e0e0e0;
+      font-weight: 600;
+    }
+    #searchInput {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border: 4px solid #16a085;
+    }
+    .section-header {
+      font-size: 18px;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Trang Cá Nhân Sinh Viên</h1>
+
+  <button class="accordion-button" onclick="toggleAccordion('info', this)">
+    Thông tin Sinh viên <span class="arrow">▼</span>
+  </button>
+  <div id="info" class="accordion-content">
+    <div style="display: flex; align-items: center;">
+      <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/02/anh-avatar-cute-3.jpg" alt="Ảnh đại diện" class="profile-image">
+      <div>
+        <p><strong class="section-header">Họ tên:</strong> Cao Văn Thượng</p>
+        <p><strong class="section-header">MSSV:</strong> 123456789</p>
+        <p><strong class="section-header">Lớp:</strong> CNTT18B</p>
+        <p><strong class="section-header">Trường:</strong>
+          <a href="https://www.ktcntn.edu.vn" target="_blank">Cao đẳng Kỹ thuật Công nghệ Nha Trang</a>
+        </p>
+        <p><strong class="section-header">Năm sinh:</strong> 2003</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <p><strong class="section-header">Hồ sơ Sinh viên:</strong></p>
+      <p><strong class="section-header">Tên cha:</strong> Nguyễn Văn B</p>
+      <p><strong class="section-header">Tên mẹ:</strong> Trần Thị C</p>
+      <p><strong class="section-header">Nghề nghiệp cha:</strong> Lao động tự do</p>
+      <p><strong class="section-header">Nghề nghiệp mẹ:</strong> Lao động tự do</p>
+    </div>
+  </div>
+
+  <button class="accordion-button" onclick="toggleAccordion('contact', this)">
+    Thông tin Liên hệ <span class="arrow">▼</span>
+  </button>
+  <div id="contact" class="accordion-content">
+    <p><strong class="section-header">Số điện thoại:</strong> 0912 345 678</p>
+    <p><strong class="section-header">Email:</strong> Vanthuong@example.com</p>
+    <p><strong class="section-header">Địa chỉ:</strong> Khánh Vĩnh, Khánh Hoà</p>
+  </div>
+
+  <button class="accordion-button" onclick="toggleAccordion('hobbies', this)">
+    Sở thích và Kỹ năng <span class="arrow">▼</span>
+  </button>
+  <div id="hobbies" class="accordion-content">
+    <p><strong class="section-header">Sở thích:</strong> Thiết kế, đọc sách, chơi bóng đá</p>
+    <p><strong class="section-header">Kỹ năng:</strong> HTML, CSS, JavaScript, React, Node.js</p>
+  </div>
+
+  <button class="accordion-button" onclick="toggleAccordion('goals', this)">
+    Mục tiêu nghề nghiệp <span class="arrow">▼</span>
+  </button>
+  <div id="goals" class="accordion-content">
+    <p><strong class="section-header">Mục tiêu nghề nghiệp:</strong> Trong hiện tại sẽ phấn đấu học tập cố gắng</p>
+  </div>
+
+  <button class="accordion-button" onclick="toggleAccordion('achievements', this)">
+    Thành tích nổi bật <span class="arrow">▼</span>
+  </button>
+  <div id="achievements" class="accordion-content">
+    <p><strong class="section-header">Thành tích nổi bật:</strong> Bản thân luôn cố gắng trong học tập</p>
+  </div>
+
+  <button class="accordion-button" onclick="toggleAccordion('social', this)">
+    Mạng xã hội và Liên hệ <span class="arrow">▼</span>
+  </button>
+  <div id="social" class="accordion-content">
+    <p><strong class="section-header">Facebook:</strong> 
+      <a href="https://www.facebook.com/Văn Thượng" target="_blank">facebook.com/Văn Thượng</a>
+    </p>
+    <p><strong class="section-header">Zalo:</strong> 
+      <a href="https://zalo.me/0327544092" target="_blank">0327544092</a>
+    </p>
+    <p><strong class="section-header">Gọi điện:</strong> 
+      <a href="tel:0912345678">0912 345 678</a>
+    </p>
+  </div>
+
+  <button class="accordion-button" onclick="toggleAccordion('feedback', this)">
+    Đánh giá và Phản hồi <span class="arrow">▼</span>
+  </button>
+  <div id="feedback" class="accordion-content">
+    <p><strong class="section-header">Đánh giá:</strong> "Chúng tôi rất vui được làm việc cùng bạn." - Giảng viên</p>
+  </div>
+
+  <button class="accordion-button" onclick="toggleAccordion('table', this)">
+    Bảng Tra cứu Sinh viên <span class="arrow">▼</span>
+  </button>
+  <div id="table" class="accordion-content">
+    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Tìm theo tên hoặc MSSV...">
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Họ tên</th>
+          <th>MSSV</th>
+          <th>Lớp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Cao Văn Thượng</td>
+          <td>123456789</td>
+          <td>CNTT18B</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Trần Thị B</td>
+          <td>987654321</td>
+          <td>CNTT18A</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Lê Hoàng C</td>
+          <td>112233445</td>
+          <td>CNTTC</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  function toggleAccordion(id, button) {
+    const allContents = document.querySelectorAll('.accordion-content');
+    const allButtons = document.querySelectorAll('.accordion-button');
+
+    allContents.forEach(content => {
+      if (content.id !== id) {
+        content.classList.remove('open');
+        content.style.maxHeight = null;
+      }
+    });
+
+    allButtons.forEach(btn => {
+      if (btn !== button) {
+        btn.classList.remove('open');
+      }
+    });
+
+    const content = document.getElementById(id);
+    if (content.classList.contains('open')) {
+      content.classList.remove('open');
+      content.style.maxHeight = null;
+      button.classList.remove('open');
+    } else {
+      content.classList.add('open');
+      content.style.maxHeight = content.scrollHeight + 'px';
+      button.classList.add('open');
+    }
+  }
+
+  function searchTable() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const rows = document.querySelectorAll('#studentTable tbody tr');
+
+    rows.forEach(row => {
+      const name = row.cells[1].innerText.toLowerCase();
+      const mssv = row.cells[2].innerText.toLowerCase();
+      if (name.includes(input) || mssv.includes(input)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
