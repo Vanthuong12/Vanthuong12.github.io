@@ -1,0 +1,141 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Thanh điều hướng */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #007BFF;
+  padding: 15px 0;
+}
+
+nav h2 a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav h2 a:hover {
+  color: #ffcc00;
+}
+
+/* Container chính */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner */
+.banner img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Khung nhập email đơn giản */
+.email-box {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+}
+
+.email-box input[type="email"] {
+  width: 60%;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.email-box input[type="submit"] {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.email-box input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Dòng ảnh ngôn ngữ lập trình */
+.image-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.image-block {
+  width: 40%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-block img {
+  width: 100px;
+  height: auto;
+  margin: 10px 0;
+}
+
+/* Khung đăng nhập email */
+.login-box {
+  background-color: #f0f8ff;
+  border: 2px solid #007BFF;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  max-width: 400px;
+}
+
+.login-box h4 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.login-box input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
