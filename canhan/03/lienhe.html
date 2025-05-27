@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liên hệ | Văn Thượng Hotel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Văn Thượng <span class="highlight">Hotel</span></h1>
+    <nav>
+      <ul>
+        <li><a href="trangchu.html">Trang chủ</a></li>
+        <li><a href="datphong.html">Đặt phòng</a></li>
+        <li><a href="thuexe.html">Thuê xe</a></li>
+        <li><a href="tienich.html">Tiện ích</a></li>
+        <li><a href="lienhe.html" class="active">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contact" class="container">
+      <h2>Liên hệ với chúng tôi</h2>
+      <form action="#" method="post">
+        <label for="name">Họ tên:</label>
+        <input type="text" id="name" name="name" placeholder="Nhập họ tên..." required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Nhập email..." required />
+
+        <label for="message">Nội dung:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Gửi tin nhắn cho chúng tôi..." required></textarea>
+
+        <button type="submit" class="btn-primary">Gửi liên hệ</button>
+      </form>
+
+      <div class="map-container">
+        <h3>Vị trí Trường Cao Đẳng Kỹ Thuật Công Nghệ Nha Trang</h3>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.273334367672!2d109.18629201449752!3d12.260603891498146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3170660c4e28760f%3A0xf1adf52c0a94e9aa!2zVHLGsOG7nW5nIENhbyDEkMOhbmggxJDhuqFpIFbDtG5nIHRpw6puIE5oYSBUcmFuZw!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade" 
+          title="Vị trí Trường Cao Đẳng Kỹ Thuật Công Nghệ Nha Trang">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2025 Văn Thượng Hotel. All rights reserved.</p>
+      <p>Địa chỉ: 123 Đường Biển, Thành phố Nha Trang, Việt Nam | Điện thoại: 0123 456 789</p>
+    </div>
+  </footer>
+</body>
+</html>

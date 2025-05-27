@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đặt phòng</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Văn Thượng <span class="highlight">Hotel</span></h1>
+    <nav>
+      <ul>
+        <li><a href="trangchu.html">Trang chủ</a></li>
+        <li><a href="datphong.html" class="active">Đặt phòng</a></li>
+        <li><a href="thuexe.html">Thuê xe</a></li>
+        <li><a href="tienich.html">Tiện ích</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container booking-form">
+    <h2>Đặt phòng khách sạn</h2>
+    <form>
+      <label>Họ và tên</label><input type="text" required>
+      <label>Email</label><input type="email" required>
+      <label>Ngày nhận phòng</label><input type="date" required>
+      <label>Ngày trả phòng</label><input type="date" required>
+      <label>Loại phòng</label>
+      <select>
+        <option>Phòng đơn</option>
+        <option>Phòng đôi</option>
+        <option>Phòng VIP</option>
+      </select>
+      <button class="btn-primary">Gửi yêu cầu</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Văn Thượng Hotel</p>
+  </footer>
+</body>
+</html>

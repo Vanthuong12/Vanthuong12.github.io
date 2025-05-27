@@ -1,0 +1,340 @@
+/* --- Reset cơ bản và font --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Header chung --- */
+header {
+  background: #004aad;
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+header h1 .highlight {
+  color: #ffbc00;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #ffbc00;
+  color: #004aad;
+}
+
+/* --- Button chung --- */
+.btn-primary {
+  background: #ffbc00;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  color: #004aad;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: #ffaa00;
+  color: white;
+}
+
+/* === PHẦN TRANG CHỦ === */
+body.homepage #banner {
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+  max-height: 600px;
+}
+
+body.homepage #banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+body.homepage #banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+body.homepage #banner .banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  max-width: 90vw;
+  padding: 0 1rem;
+}
+
+body.homepage #banner h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+body.homepage #banner p {
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+body.homepage #banner .btn-primary {
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+}
+
+/* === Dịch vụ nổi bật (CẬP NHẬT) === */
+body.homepage #services {
+  padding: 3rem 0;
+  text-align: center;
+  display: flex;               /* CẬP NHẬT */
+  flex-wrap: wrap;             /* CẬP NHẬT */
+  justify-content: center;     /* CẬP NHẬT */
+  gap: 2rem;                   /* CẬP NHẬT */
+}
+
+body.homepage #services h3 {
+  width: 100%;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #004aad;
+}
+
+body.homepage #services .service-box {
+  flex: 1 1 280px;             /* CẬP NHẬT */
+  max-width: 350px;            /* CẬP NHẬT */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 74, 173, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+body.homepage #services .service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 74, 173, 0.25);
+}
+
+body.homepage #services .service-box img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+body.homepage #services .service-box h4 {
+  padding: 1rem 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #004aad;
+}
+
+/* === Tiện ích (CẬP NHẬT) === */
+body.tienich .container {
+  padding: 3rem 0;
+}
+
+body.tienich h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #004aad;
+}
+
+body.tienich .boxes {
+  display: flex;               /* CẬP NHẬT */
+  flex-wrap: wrap;             /* CẬP NHẬT */
+  justify-content: center;     /* CẬP NHẬT */
+  gap: 2rem;                   /* CẬP NHẬT */
+}
+
+body.tienich .box {
+  flex: 1 1 280px;             /* CẬP NHẬT */
+  max-width: 350px;            /* CẬP NHẬT */
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(25, 118, 210, 0.15);
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+body.tienich .box:hover {
+  box-shadow: 0 12px 40px rgba(25, 118, 210, 0.3);
+  transform: translateY(-8px);
+}
+
+body.tienich .box img {
+  width: 100%;
+  height: auto;
+  margin: 1rem auto 1.8rem auto;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+body.tienich .box h3 {
+  color: #004aad;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+}
+
+body.tienich .box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* --- Form & Section chung --- */
+form label {
+  display: block;
+  margin-top: 1.3rem;
+  font-weight: 600;
+  color: #004aad;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-top: 0.4rem;
+  border-radius: 6px;
+  border: 1.8px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #004aad;
+  outline: none;
+}
+
+form textarea {
+  min-height: 120px;
+}
+
+form button.btn-primary {
+  margin-top: 1.8rem;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+/* --- Modal --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(3px);
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 6rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  max-width: 500px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: black;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  body.homepage #services,
+  body.tienich .boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

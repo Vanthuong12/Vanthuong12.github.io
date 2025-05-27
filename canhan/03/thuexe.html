@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thuê xe | Văn Thượng Hotel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Văn Thượng <span class="highlight">Hotel</span></h1>
+    <nav>
+      <ul>
+        <li><a href="trangchu.html">Trang chủ</a></li>
+        <li><a href="datphong.html">Đặt phòng</a></li>
+        <li><a href="thuexe.html" class="active">Thuê xe</a></li>
+        <li><a href="tienich.html">Tiện ích</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="car-rental" class="container fade-in">
+    <h2>Thuê xe tiện lợi tại Văn Thượng Hotel</h2>
+    <p>Chúng tôi cung cấp đa dạng các loại xe với giá hợp lý, phục vụ nhanh chóng và an toàn.</p>
+    
+    <form class="rental-form" action="#" method="post">
+      <label for="car-type">Loại xe:</label>
+      <select id="car-type" name="car-type" required>
+        <option value="">-- Chọn loại xe --</option>
+        <option value="sedan">Sedan</option>
+        <option value="suv">SUV</option>
+        <option value="minivan">Minivan</option>
+        <option value="motorbike">Xe máy</option>
+      </select>
+
+      <label for="pickup-date">Ngày nhận xe:</label>
+      <input type="date" id="pickup-date" name="pickup-date" required />
+
+      <label for="return-date">Ngày trả xe:</label>
+      <input type="date" id="return-date" name="return-date" required />
+
+      <label for="customer-name">Tên khách hàng:</label>
+      <input type="text" id="customer-name" name="customer-name" placeholder="Nhập tên của bạn" required />
+
+      <label for="customer-phone">Số điện thoại:</label>
+      <input type="tel" id="customer-phone" name="customer-phone" placeholder="Nhập số điện thoại" required />
+
+      <button type="submit" class="btn-primary">Đặt xe ngay</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2025 Văn Thượng Hotel. All rights reserved.</p>
+      <p>Địa chỉ: 123 Đường Biển, Thành phố, Việt Nam | Điện thoại: 0123 456 789</p>
+    </div>
+  </footer>
+</body>
+</html>
