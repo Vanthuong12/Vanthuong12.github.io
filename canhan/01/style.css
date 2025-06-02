@@ -1,0 +1,196 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f0f4f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #56ab2f, #a8e063);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.current {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero section */
+.hero {
+  background: url('https://s-aicmscdn.vietnamhoinhap.vn/thumb/w_1000/vnhn-media/22/11/16/huyen-khanh-vinh---cre-dangcongsan.jpg') no-repeat center/cover;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.main-image {
+  display: block;
+  margin: 30px auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Section Titles */
+main h2 {
+  margin: 30px 0 20px;
+  font-size: 2rem;
+  color: #2e7d32;
+}
+
+/* Place cards */
+.place {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.place h3 {
+  color: #388e3c;
+  margin-top: 10px;
+}
+
+/* Auth section */
+.auth-section {
+  background: #ffffff;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.auth-section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2e7d32;
+}
+
+.auth-section label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.auth-section input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.auth-section button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.auth-section button:hover {
+  background: #388e3c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #388e3c;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+}
